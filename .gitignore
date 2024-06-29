@@ -3,3 +3,6 @@ artifacts/pickle/
 src/.DS_Store
 .idea/
 .DS_Store
+Lung_Cancer.egg-info/
+src/__pycache__/
+src/components/__pycache__/
