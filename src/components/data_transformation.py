@@ -1,3 +1,5 @@
+
+
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -48,8 +50,6 @@ class DataTransformation:
             train_dataset = pd.read_csv(train_dataset_path)
             test_dataset = pd.read_csv(test_dataset_path)
 
-            data_transform = self.transform_data()
-
             # changing column name into lower case
             train_dataset.columns = train_dataset.columns.str.lower()
             test_dataset.columns = test_dataset.columns.str.lower()
@@ -59,8 +59,6 @@ class DataTransformation:
 
             train_dataset.columns = train_dataset.columns.str.replace(" ", "_")
             test_dataset.columns = test_dataset.columns.str.replace(" ", "_")
-            print(train_dataset.columns)
-            print(test_dataset.columns)
 
             # replacing input value of each column
             columns = ['gender', 'smoking', 'yellow_fingers', 'anxiety', 'peer_pressure', 'chronic_disease',
@@ -79,10 +77,12 @@ class DataTransformation:
 
             xtrain = train_dataset.drop(columns=column_to_drop, axis=1)
             ytrain = train_dataset[target_column]
-
+            print(xtrain)
             xtest = test_dataset.drop(columns=column_to_drop, axis=1)
             ytest = test_dataset[target_column]
 
+
+            data_transform = self.transform_data()
             # data transformation
             xtrain_transform_data = data_transform.fit_transform(xtrain)
             xtest_transform_data = data_transform.transform(xtest)
