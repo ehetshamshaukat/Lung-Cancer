@@ -80,9 +80,6 @@ class DataTransformation:
            # concatination depended and independed features
            train_transform_dataset = np.c_[xtrain_transform_data , np.array(ytrain)]
            test_transform_dataset = np.c_[xtest_transform_data , np.array(ytest)]
-           print(train_transform_dataset)
-           print("*"*20)
-           print(test_transform_dataset)
 
            # saving data transformation in pickle format
            save_file_as_pickle(data_transform, self.data_transformation_pickle.data_transformation_pickle_file_path)
