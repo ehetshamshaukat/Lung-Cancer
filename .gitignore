@@ -6,3 +6,4 @@ src/.DS_Store
 Lung_Cancer.egg-info/
 src/__pycache__/
 src/components/__pycache__/
+src/pipeline/__pycache__/prediction_pipeline.cpython-310.pyc
