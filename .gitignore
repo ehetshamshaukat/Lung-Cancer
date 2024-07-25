@@ -1,5 +1,4 @@
 venv/
-artifacts/pickle/
 src/.DS_Store
 .idea/
 .DS_Store
